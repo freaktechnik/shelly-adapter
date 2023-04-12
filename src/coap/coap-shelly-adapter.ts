@@ -25,6 +25,7 @@ import {Shelly4Pro} from '../devices/shelly-4-pro';
 import {ShellyPlug} from '../devices/shelly-plug';
 import {ShellyPlugS} from '../devices/shelly-plug-s';
 import {Shelly2Roller} from '../devices/shelly-2-roller';
+import {ShellyHTPlus} from '../devices/shelly-ht-plus';
 
 export class CoapShellyAdapter extends Adapter {
   constructor(addonManager: AddonManagerProxy,
@@ -172,6 +173,9 @@ export class CoapShellyAdapter extends Adapter {
       }
       case 'ShellyPlugS': {
         return new ShellyPlugS(this, device.id, device);
+      }
+      case 'ShellyPlusHT': {
+        return new ShellyHTPlus(this, device.id);
       }
     }
 

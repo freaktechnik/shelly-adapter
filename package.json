@@ -65,7 +65,7 @@
   ],
   "dependencies": {
     "mqtt": "^4.2.8",
-    "shellies": "^1.5.0"
+    "shellies": "^1.7.0"
   },
   "devDependencies": {
     "@types/node": "^15.12.4",
