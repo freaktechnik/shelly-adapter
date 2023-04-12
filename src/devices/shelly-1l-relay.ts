@@ -5,8 +5,8 @@
  */
 
 import {Adapter, Property} from 'gateway-addon';
-import {PropertyValue} from 'gateway-addon/lib/schema';
-import { ButtonProperty } from '../properties/button-property';
+import {Any} from 'gateway-addon/lib/schema';
+import {ButtonProperty} from '../properties/button-property';
 import {ShellyController} from '../shelly-controller';
 import {OverheatableDevice} from './overheatable-device';
 
@@ -32,7 +32,7 @@ export class Shelly1L extends OverheatableDevice {
     });
   }
 
-  findProperty(propertyName: string): Property<PropertyValue> | undefined {
+  findProperty(propertyName: string): Property<Any> | undefined {
     const existingProperty = super.findProperty(propertyName);
     if (existingProperty) {
       return existingProperty;
